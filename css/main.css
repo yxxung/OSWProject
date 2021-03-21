@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+div#mainContainer {
+    margin: 0px auto;
+    padding: 20px;
+}
+
+#header {
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+#header-login{
+    float: right;
+}
+
+#header-login ul li{
+    list-style: none;
+    color: black;
+    background: white;
+    float: right;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#header-login .login-menu{
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 100px;
+}
+
+nav#nav-menu {
+    height: 30px;
+    width: 100%;
+}
+
+nav#nav-menu ul li {
+    list-style: none;
+    color: black;
+    background: white;
+    float: left;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#nav-menu .nav-menu {
+    text-decoration: none;
+    color: black;
+    display: block;
+    width: 150px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#contents {
+    float: left;
+    padding: 20px;
+    background: burlywood;
+    height: 500px;
+    width: 65%;
+}
+
+#rightSideBar {
+    float: right;
+    background: khaki;
+    width: 30%;
+}
+
+
+div#div-footer {
+    background: antiquewhite;
+    padding: 20px;
+    clear: both;
+}
