@@ -2,17 +2,32 @@
 
 
 // storing input from register-form
-function store() {
+function register() {
 
     let name = document.getElementById('registerUserId').value;
     let pw = document.getElementById('registerPassword').value;
 
-    // if(localStorage.)
-    // localStorage.setItem('user', JSON.stringify({id : name , password: pw}));
+    if (registerInvaildCheck(name)) {
+        for (let key = 0; key < 100; key++) {
+            if (localStorage.getItem(key.toString()) == null) {
+                localStorage.setItem(key, JSON.stringify({id: name, password: pw}));
+                break;
+            }
 
-    localStorage.setItem('user', name);
-    localStorage.setItem('password', pw);
+        }
+    }
 
+}
+
+function registerInvaildCheck(name) {
+
+    for (let key = 0; key < localStorage.length; key++) {
+        if ((JSON.parse(localStorage.getItem(key.toString())).id) == name) {
+            alert('이미 있는 아이디');
+            return false;
+        }
+    }
+    return true;
 }
 
 
@@ -26,26 +41,11 @@ function check() {
     let userName = document.getElementById("loginUserId").value;
     let userPw = document.getElementById("loginPassword").value;
 
-    // let checkName, checkPw;
-    //
-    // if(userName != null){
-    //     checkName = userName.value;
-    // }else{
-    //     checkName = null;
-    // }
-    //
-    // if(userPw != null){
-    //     checkPw = userPw.value;
-    // }else{
-    //     checkPw = null;
-    // }
 
-
-
-    console.log("your username is " + userName + "and your password" + password)
+    console.log("your username is " + userName + "and your password" + userPw)
 
     // check if stored data from register-form is equal to data from login form
-    if (userName.value !== storedName || userPw.value !== storedPw) {
+    if (userName !== storedName || userPw !== storedPw) {
         alert('ERROR');
     } else {
         alert('You are loged in.');
