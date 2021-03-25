@@ -4,10 +4,10 @@
 // storing input from register-form
 function register() {
 
-    let name = document.getElementById('registerUserId').value;
-    let pw = document.getElementById('registerPassword').value;
+    const name = document.getElementById('registerUserId').value;
+    const pw = document.getElementById('registerPassword').value;
 
-    if (registerInvaildCheck(name)) {
+    if (registerInvalidCheck(name)) {
         for (let key = 0; key < 100; key++) {
             if (localStorage.getItem(key.toString()) == null) {
                 localStorage.setItem(key, JSON.stringify({id: name, password: pw}));
@@ -19,35 +19,48 @@ function register() {
 
 }
 
-function registerInvaildCheck(name) {
+function registerInvalidCheck(name) {
 
-    for (let key = 0; key < localStorage.length; key++) {
-        if ((JSON.parse(localStorage.getItem(key.toString())).id) == name) {
-            alert('이미 있는 아이디');
-            return false;
+    if (localStorage.length != 100) {
+        for (let key = 0; key < localStorage.length; key++) {
+            if ((JSON.parse(localStorage.getItem(key.toString())).id) == name) {
+                alert('이미 있는 아이디');
+                return false;
+            }
         }
+        return true;
+    } else {
+        alert('더이상 회원가입 불가능');
+        return false;
     }
-    return true;
 }
 
 
-function check() {
-
-    // stored data from the register-form
-    let storedName = localStorage.getItem('user');
-    let storedPw = localStorage.getItem('password');
+function login() {
 
     // entered data from the login-form
-    let userName = document.getElementById("loginUserId").value;
-    let userPw = document.getElementById("loginPassword").value;
+    const userName = document.getElementById("loginUserId").value;
+    const userPw = document.getElementById("loginPassword").value;
 
+    userInvalidCheck(userName, userPw);
 
-    console.log("your username is " + userName + "and your password" + userPw)
+}
 
-    // check if stored data from register-form is equal to data from login form
-    if (userName !== storedName || userPw !== storedPw) {
-        alert('ERROR');
-    } else {
-        alert('You are loged in.');
+function userInvalidCheck(name, pw){
+
+    for(let key = 0; key < localStorage.length; key++){
+        if ((JSON.parse(localStorage.getItem(key.toString())).id) == name) {
+            if((JSON.parse(localStorage.getItem(key.toString()))).password == pw){
+                alert('로그인 되었습니다.');
+                return true;
+            }else{
+                alert('비밀번호가 일치하지 않습니다.');
+                return false;
+            }
+        }else{
+            alert('회원이 없습니다.');
+            return false;
+        }
     }
+    return false;
 }
