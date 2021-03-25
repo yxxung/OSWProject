@@ -1,3 +1,4 @@
+//html 모듈화
 function includeHTML() {
     var z, i, elmnt, file, xhttp;
     z = document.getElementsByTagName("*");

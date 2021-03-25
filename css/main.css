@@ -5,6 +5,7 @@ div#mainContainer {
     padding: 20px;
 }
 
+/*header css*/
 #header {
     position: relative;
     padding: 10px;
@@ -31,7 +32,7 @@ div#mainContainer {
     display: block;
     width: 100px;
 }
-
+/*nav css*/
 nav#nav-menu {
     height: 30px;
     width: 100%;
@@ -55,22 +56,26 @@ nav#nav-menu ul li {
     font-weight: bold;
 }
 
+/*contents css*/
 #contents {
     float: left;
     padding: 20px;
     background: burlywood;
     height: 500px;
-    width: 65%;
+    width: 80%;
 }
 
+
+/*RSB contents*/
 #rightSideBar {
     float: right;
     background: khaki;
-    width: 30%;
+    width: 15%;
 }
 
 
-div#div-footer {
+/*footer contents*/
+#footer {
     background: antiquewhite;
     padding: 20px;
     clear: both;

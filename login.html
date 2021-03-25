@@ -17,7 +17,12 @@
 
     </nav>
 
-    <section id="contents" include-html="main-Contents.html">
+    <section id="contents">
+        <form id="login-form">
+            <input id="loginUserId" type="text" placeholder="Name"/>
+            <input id="loginPassword" type="password" placeholder="Password"/>
+            <button type="button" id="loginButton" onClick="check()">login</button>
+        </form>
 
     </section>
 
@@ -35,5 +40,5 @@
 <script>
     includeHTML();
 </script>
-
+<script src="js/login.js"></script>
 </html>

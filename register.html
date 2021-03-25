@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>SweetHome</title>
     <link rel="stylesheet" href="css/main.css" type="text/css">
+
     <script src="js/includeHTML.js"></script>
 </head>
 <body>
@@ -17,7 +18,14 @@
 
     </nav>
 
-    <section id="contents" include-html="main-Contents.html">
+    <section id="contents" >
+
+        <form id="register-form">
+            <input id="registerUserId" type="text" placeholder="Name"/>
+            <input id="registerPassword" type="password" placeholder="Password"/>
+            <button type="button" id="registerButton" onClick="store()">register</button>
+        </form>
+
 
     </section>
 
@@ -32,8 +40,10 @@
 
 
 </body>
+<script src="js/login.js"></script>
 <script>
     includeHTML();
 </script>
+
 
 </html>
