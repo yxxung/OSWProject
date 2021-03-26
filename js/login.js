@@ -42,7 +42,13 @@ function login() {
     const userName = document.getElementById("loginUserId").value;
     const userPw = document.getElementById("loginPassword").value;
 
-    userInvalidCheck(userName, userPw);
+
+    if(userInvalidCheck(userName, userPw) != -1){
+       const userKey = userInvalidCheck(userName, userPw);
+        alert('로그인 되었습니다.');
+        setCookie("currentUser", userKey.toString(), 4);
+        window.location.href = "index.html";
+    }
 
 }
 
@@ -51,16 +57,13 @@ function userInvalidCheck(name, pw){
     for(let key = 0; key < localStorage.length; key++){
         if ((JSON.parse(localStorage.getItem(key.toString())).id) == name) {
             if((JSON.parse(localStorage.getItem(key.toString()))).password == pw){
-                alert('로그인 되었습니다.');
-                return true;
+                return key;
             }else{
                 alert('비밀번호가 일치하지 않습니다.');
-                return false;
+                return -1;
             }
-        }else{
-            alert('회원이 없습니다.');
-            return false;
         }
     }
-    return false;
+    alert('회원이 없습니다.');
+    return -1;
 }
