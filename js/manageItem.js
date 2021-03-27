@@ -1,3 +1,24 @@
+const itemDB = {
+    "items" : [
+        {"item1" :{
+            "category" : "top",
+            "name" : "아디다스상의",
+            "price" : "248,000원"
+        }},
+
+        {"item2" : {
+            "category" : "top",
+            "name" : "언더아머상의",
+            "price" : "180,000원"
+        }}
+    ]
+
+}
+function setItemDB() {
+
+    localStorage.setItem("DB", JSON.stringify({DB : itemDB}));
+}
+
 /**
  *
  */
@@ -27,7 +48,5 @@ function getChooseItem() {
     localStorage.setItem(storageName, JSON.stringify({items : choosedItemList}));
 
     alert('장바구니에 담겼습니다.');
-    
-
 
 }
