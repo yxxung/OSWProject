@@ -3,11 +3,11 @@
  */
 function getChooseItem() {
 
-    const choosedItemLength = document.getElementsByName("chooseItem");
-    let choosedItem = null;
+    const choosedItemLength = document.getElementsByName("chooseItem").length;
+    let choosedItem = document.getElementsByName("chooseItem");
     const currentUser = getCookie("currentUser").toString();
-    const storageName = "userItemList" + currentUser;
-    let choosedItemList = [];
+    const storageName = currentUser + "userItemList" ;
+    let choosedItemList = new Array();
 
 
     if(localStorage.getItem(storageName) == null){
@@ -17,9 +17,17 @@ function getChooseItem() {
 
     for(let i =0; i<choosedItemLength; i++){
         if(choosedItem[i].checked == true){
-            choosedItem = document.getElementsByName("chooseItem")[i].value;
-            choosedItemList.push(JSON.stringify({choosedItem: 1}));
+            let itemName = document.getElementsByName("chooseItem")[i].value;
+            let itemJson = {};
+            itemJson[itemName] = "1" ; //json 의 Key를 변수로 받기위해 프로퍼티 설
+            choosedItemList.push(itemJson);
         }
     }
+
+    localStorage.setItem(storageName, JSON.stringify({items : choosedItemList}));
+
+    alert('장바구니에 담겼습니다.');
+    
+
 
 }
