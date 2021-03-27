@@ -1,20 +1,24 @@
 /**
  *
  */
-function getChoosedItem() {
+function getChooseItem() {
 
     const choosedItemLength = document.getElementsByName("chooseItem");
+    let choosedItem = null;
     const currentUser = getCookie("currentUser").toString();
-    const storage = JSON.parse(localStorage.getItem(currentUser));
+    const storageName = "userItemList" + currentUser;
     let choosedItemList = [];
-    let choosedItem;
 
-    if(localStorage.getItem(currentUser+"userItemList") == null){
-        localStorage.setItem(currentUser+"userItemList", null);
+
+    if(localStorage.getItem(storageName) == null){
+        localStorage.setItem(storageName, null);
     }
-    for(let i =0; i<choosedItemLength; i++){
-        if(document.getElementsByName("chooseItem").checked == true){
 
+
+    for(let i =0; i<choosedItemLength; i++){
+        if(choosedItem[i].checked == true){
+            choosedItem = document.getElementsByName("chooseItem")[i].value;
+            choosedItemList.push(JSON.stringify({choosedItem: 1}));
         }
     }
 
