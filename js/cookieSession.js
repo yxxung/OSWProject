@@ -10,11 +10,39 @@ var getCookie = function(name) {
     return value? value[2] : null;
 };
 
-function loginCheck() {
+var deleteCookie = function(name) {
+    setCookie(name, "", -1);
+}
+
+function changeLoginBtn() {
+
+    const registerBtn = document.getElementById("registerBtn");
+    const loginBtn = document.getElementById("loginBtn");
+    const logoutBtn = document.getElementById("logoutBtn");
+    const bagBtn = document.getElementById("bagBtn");
+
+
 
     if(getCookie("currentUser") != null){
-        document.getElementById("header-logout").style.display = "block";
-        document.getElementById("header-login").style.display = "none";
+        loginBtn.style.display = "none";
+        registerBtn.style.display = "none"
+    }else{
+        logoutBtn.style.display = "none";
+        bagBtn.style.display = "none"
     }
 
 }
+
+function logout() {
+
+    if(getCookie("currentUser") != null){
+        deleteCookie("currentUser");
+        alert('로그아웃되었습니다.');
+        window.location.href = "index.html";
+    }else{
+        alert('이미 로그아웃되어있습니다.');
+    }
+
+}
+
+

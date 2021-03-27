@@ -4,13 +4,25 @@
     <meta charset="UTF-8">
     <title>SweetHome</title>
     <link rel="stylesheet" href="css/main.css" type="text/css">
-
+    <script src="js/cookieSession.js"></script>
     <script src="js/includeHTML.js"></script>
 </head>
 <body>
 <div id="mainContainer">
 
-    <header id="header" include-html="header.html">
+    <header id="header">
+        <div id="headerLogin">
+            <ul>
+                <li><a class="login-menu" id ="registerBtn" href="register.html">회원가입</a></li>
+                <li><a class="login-menu" id ="loginBtn" href="login.html">로그인</a></li>
+                <li><a class="login-menu" id ="logoutBtn" onclick="logout()">로그아웃</a></li>
+                <li><a class="login-menu" id ="bagBtn" href="#">장바구니</a></li>
+            </ul>
+        </div>
+
+        <div id="logo">
+            <h1><a href="index.html">Sweet Home</a></h1>
+        </div>
 
     </header>
 
@@ -43,6 +55,7 @@
 <script src="js/login.js"></script>
 <script>
     includeHTML();
+    changeLoginBtn();
 </script>
 
 

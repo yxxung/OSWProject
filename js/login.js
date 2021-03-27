@@ -11,6 +11,7 @@ function register() {
         for (let key = 0; key < 100; key++) {
             if (localStorage.getItem(key.toString()) == null) {
                 localStorage.setItem(key, JSON.stringify({id: name, password: pw}));
+                window.location.href = "index.html";
                 break;
             }
 
