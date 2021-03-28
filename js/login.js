@@ -47,9 +47,14 @@ function registerInvalidCheck(name) {
     if (localStorage.length != 100) {
         for (let key = 0; key < localStorage.length; key++) {
             //localStorage 내 JSON을 프로퍼티를 이용하기 위해 parse후 사용
-            if ((JSON.parse(localStorage.getItem(key.toString())).id) == name) {
-                alert('이미 있는 아이디');
-                return false;
+
+            try {
+                if ((JSON.parse(localStorage.getItem(key.toString())).id) == name) {
+                    alert('이미 있는 아이디');
+                    return false;
+                }
+            } catch(err){
+                key++
             }
         }
         //일치하는 아이디가 없으면 true 리턴
