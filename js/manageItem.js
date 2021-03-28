@@ -61,7 +61,7 @@ function getChooseItem() {
 
     if(currentUser == null){
         alert('로그인하세요');
-        window.location.href = "login.html";
+        window.location.href = "manageUser.html";
     }
 
 
