@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-ico">
+    <meta name="theme-color" content="#ffffff">
     <title>SweetHome</title>
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-    <script src="js/cookieSession.js"></script>
-    <script src="js/includeHTML.js"></script>
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <script src="../js/includeHTML.js"></script>
+    <script src="../js/cookieSession.js"></script>
 </head>
+
 <body>
 <div id="mainContainer">
-
     <header id="header">
         <div id="headerLogin">
             <ul>
@@ -19,41 +21,27 @@
                 <li><a class="login-menu" id ="bagBtn" href="#">장바구니</a></li>
             </ul>
         </div>
-
         <div id="logo">
             <h1><a href="index.html">Sweet Home</a></h1>
         </div>
-
     </header>
 
-    <nav id="nav-menu" include-html="nav-menu.html">
-
-    </nav>
+    <nav id="nav-menu" include-html="./layout/nav_menu.html"></nav>
 
     <section id="contents">
-        <form id="login-form">
-            <input id="loginUserId" type="text" placeholder="Name"/>
-            <input id="loginPassword" type="password" placeholder="Password"/>
-            <button type="button" id="loginButton" onClick="login()">login</button>
-        </form>
-
+        <h2>main section</h2>
     </section>
 
-    <aside id="rightSideBar" include-html="rightSideBar.html">
+    <aside id="rightSideBar" include-html="./layout/rightSideBar.html"></aside>
 
-    </aside>
-
-    <footer id="footer" include-html="footer.html">
-
-    </footer>
+    <footer id="footer" include-html="./layout/footer.html"></footer>
 </div>
-
-
 </body>
+
 <script>
     includeHTML();
     changeLoginBtn();
 </script>
-<script src="js/login.js"></script>
-<script src="js/cookieSession.js"></script>
+<script src="../js/manageItem.js"></script>
+
 </html>
