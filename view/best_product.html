@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <title>SweetHome</title>
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-    <link rel="stylesheet" href="css/bestContents.css" type="text/css">
-    <script src="js/includeHTML.js"></script>
-    <script src="js/cookieSession.js"></script>
-    <script src="js/login.js"></script>
-    <script src="js/manageItem.js"></script>
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <link rel="stylesheet" href="../css/bestContents.css" type="text/css">
+    <script src="../js/includeHTML.js"></script>
+    <script src="../js/cookieSession.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/manageItem.js"></script>
 </head>
 <body>
 <div id="mainContainer">
@@ -30,9 +29,7 @@
 
     </header>
 
-    <nav id="nav-menu" include-html="nav-menu.html">
-
-    </nav>
+    <nav id="nav-menu" include-html="./layout/nav_menu.html"></nav>
 
     <section id="contents">
             <div class="sub_title_area sorting">
@@ -137,13 +134,9 @@
 
     </section>
 
-    <aside id="rightSideBar" include-html="rightSideBar.html">
+    <aside id="rightSideBar" include-html="./layout/rightSideBar.html"></aside>
 
-    </aside>
-
-    <footer id="footer" include-html="footer.html">
-
-    </footer>
+    <footer id="footer" include-html="./layout/footer.html"></footer>
 </div>
 
 

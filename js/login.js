@@ -89,7 +89,8 @@ function login() {
 
 
 /**
- *
+ * @author 최제현
+ * @date 2021/03/26
  * @param name 'login 폼에서 받은 id'
  * @param pw '폼에서 받은 password'
  * @returns user key '해당 유저의 localStorage key', -1
