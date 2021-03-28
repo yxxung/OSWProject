@@ -53,6 +53,7 @@ function registerInvalidCheck(name) {
                     alert('이미 있는 아이디');
                     return false;
                 }
+                //localStorage exception 처리 수정 요망
             } catch(err){
                 key++
             }
