@@ -73,7 +73,7 @@ function getChooseItem() {
             //JSON 의 Key 이름을 동적으로 저장합니다.
             let itemJson = {};
             //default 갯수는 1개입니다.
-            itemJson[itemName] = "1" ; //json 의 Key를 변수로 받기위해 프로퍼티 설
+            itemJson["item" + i] = itemName; //json 의 Key를 변수로 받기위해 프로퍼티 설
             choosedItemList.push(itemJson);
         }
     }

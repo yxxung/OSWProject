@@ -12,7 +12,9 @@ function renderProfile() {
 
         for(let i = 0; i<userItemList.items.length; i++){
 
-            let key = Object.keys(userItemList.items[i])
+            let thisItem = "item" + i.toString();
+            let itemNumber = userItemList.items[i][thisItem];
+
 
             let acover = document.createElement("a");
             acover.setAttribute("class", "cover");
@@ -24,7 +26,7 @@ function renderProfile() {
             newCheckBtn.setAttribute("type", "checkbox");
             newCheckBtn.setAttribute("name", "chooseBuy");
             acover.appendChild(newCheckBtn);
-            Div.innerHTML = userItemList.items[0].item1 + "개";
+            Div.innerHTML = itemNumber + "번 item";
 
             contents.appendChild(acover);
 
