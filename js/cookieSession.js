@@ -20,6 +20,7 @@ function changeLoginBtn() {
     const loginBtn = document.getElementById("loginBtn");
     const logoutBtn = document.getElementById("logoutBtn");
     const bagBtn = document.getElementById("bagBtn");
+    const profileBtn = document.getElementById("profileBtn")
 
 
 

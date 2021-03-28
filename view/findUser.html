@@ -2,47 +2,60 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-ico">
-    <meta name="theme-color" content="#ffffff">
     <title>SweetHome</title>
     <link rel="stylesheet" href="../css/main.css" type="text/css">
-    <script src="../js/includeHTML.js"></script>
     <script src="../js/cookieSession.js"></script>
+    <script src="../js/includeHTML.js"></script>
 </head>
-
 <body>
 <div id="mainContainer">
+
     <header id="header">
         <div id="headerLogin">
             <ul>
                 <li><a class="login-menu" id ="registerBtn" href="register.html">회원가입</a></li>
                 <li><a class="login-menu" id ="loginBtn" href="login.html">로그인</a></li>
                 <li><a class="login-menu" id ="logoutBtn" onclick="logout()">로그아웃</a></li>
-                <li><a class="login-menu" id ="bagBtn" href="mybag.html">장바구니</a></li>
-                <li><a class="login-menu" id ="profileBtn" href="userProfile.html">내 정보</a></li>
+                <li><a class="login-menu" id ="bagBtn" href="#">장바구니</a></li>
             </ul>
         </div>
+
         <div id="logo">
             <h1><a href="index.html">Sweet Home</a></h1>
         </div>
+
     </header>
 
     <nav id="nav-menu" include-html="./layout/nav_menu.html"></nav>
 
     <section id="contents">
-        <h2>main section</h2>
+        <form id="login-form">
+            <p>아이디 찾기</p>
+            <input id="findUserName" type="text" placeholder="Name"/>
+            <input id="findUserContact" type="text" placeholder="'-'를 뺀 전화번호"/>
+            <button type="button" id="findUserBtn" onClick="findUserId()">아이디 찾기</button>
+
+            <p>비밀번호 찾기</p>
+
+            <input id="findPasswordId" type="text" placeholder="Id"/>
+            <input id="findPasswordName" type="text" placeholder="Name"/>
+            <input id="findPasswordContact" type="text" placeholder="'-'를 뺀 전화번호"/>
+            <button type="button" id="findPasswordBtn" onClick="findUserPassword()">비밀번호 찾기</button>
+
+       </form>
+
     </section>
 
     <aside id="rightSideBar" include-html="./layout/rightSideBar.html"></aside>
 
     <footer id="footer" include-html="./layout/footer.html"></footer>
 </div>
-</body>
 
+
+</body>
 <script>
     includeHTML();
     changeLoginBtn();
 </script>
-<script src="../js/manageItem.js"></script>
-
+<script src="../js/manageUser.js"></script>
 </html>

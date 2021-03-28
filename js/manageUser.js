@@ -225,9 +225,11 @@ function findPasswordByName(userName, contact, id) {
             if ((thisUser.usercontact) == contact) {
                 if((thisUser.id) == id){
                     alert('password를 1234로 리셋합니다. 비밀번호를 변경해주세요.');
+                    //Json 수정
                     delete thisUser.password;
                     thisUser.password = '1234';
                     thisUser = JSON.stringify(thisUser);
+                    //수정한 Json 을 localStorage에 다시 올림
                     localStorage.removeItem(key.toString());
                     localStorage.setItem(key.toString(), thisUser);
                     return;
