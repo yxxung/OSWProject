@@ -15,6 +15,7 @@
 const itemDB = {
     "items" : [
         {"item1" :{
+            "itemNo" : "1",
             "category" : "top",
             "name" : "아디다스상의",
             "price" : "248,000원",
@@ -23,6 +24,7 @@ const itemDB = {
         }},
 
         {"item2" : {
+            "itemNo" : "2",
             "category" : "top",
             "name" : "언더아머상의",
             "price" : "180,000원",
