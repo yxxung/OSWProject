@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0px;
+    padding: 0px;
+}
+
 div#mainContainer {
     margin: 0 auto;
     padding: 20px;
@@ -8,9 +17,8 @@ div#mainContainer {
 /*header css*/
 #header {
     position: relative;
-    padding: 10px;
+    padding: 20px;
     width: 100%;
-    text-align: center;
 }
 
 #headerLogin{
@@ -24,6 +32,7 @@ div#mainContainer {
     float: right;
     vertical-align: middle;
     text-align: center;
+    margin-top: 100px;
 }
 
 #headerLogin .login-menu{
@@ -31,6 +40,13 @@ div#mainContainer {
     color: black;
     display: block;
     width: 100px;
+}
+
+#header .logo{
+    position: center;
+    color: darkslateblue;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 /*#headerLogout{*/
@@ -56,6 +72,7 @@ div#mainContainer {
 nav#nav-menu {
     height: 30px;
     width: 100%;
+    padding-top: 30px;
 }
 
 nav#nav-menu ul li {
@@ -71,27 +88,27 @@ nav#nav-menu ul li {
     text-decoration: none;
     color: black;
     display: block;
-    width: 150px;
-    font-size: 15px;
+    width: 180px;
+    font-size: 17px;
     font-weight: bold;
+    margin: 20px 0 20px 0;
 }
 
 /*contents css*/
 #contents {
     float: left;
     padding: 20px;
-    background: burlywood;
     height: 500px;
-    width: 80%;
+    width: 100%;
 }
 
 
 /*RSB contents*/
-#rightSideBar {
+/*#rightSideBar {
     float: right;
     background: khaki;
     width: 15%;
-}
+}*/
 
 
 /*footer contents*/
@@ -99,4 +116,60 @@ nav#nav-menu ul li {
     background: antiquewhite;
     padding: 20px;
     clear: both;
+    margin-top: 3000px;
+}
+
+.best_bg{
+    background-image: url("image/bestimg.jpg");
+    background-size: auto;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.best_intro{
+    text-align: center;
+    padding-top: 151px;
+    font-size: 30px;
+    color: white;
+}
+
+/*상품 목록 페이지*/
+.clear{
+    clear: both;
+}
+
+#contents .box{
+    margin-top: 100px;
+    width: 100%;
+    /*고쳐라*/
+}
+
+.best_items{
+    width: 270px;
+    height: 380px;
+    float: left;
+    margin: 50px 0 60px 40px;
+    padding-left: 40px;
+}
+
+.box > h2{
+    text-align: center;/*고쳐라*/
+    font-size: 30px;
+}
+
+.a{
+    font-size: 18px;
+}
+
+.b{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.c{
+    float: right;
+    font-weight: bold;
+    font-size: 13px;
+    color: darkslateblue;
 }

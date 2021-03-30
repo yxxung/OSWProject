@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html lang="ko">
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#ffffff">
     <title>SweetHome</title>
     <link rel="stylesheet" href="../css/main.css" type="text/css">
-    <link rel="stylesheet" href="../css/bestContents.css" type="text/css">
+    <script src="https://kit.fontawesome.com/cf795c31b2.js"
+            crossorigin="anonymous"></script>
     <script src="../js/includeHTML.js"></script>
     <script src="../js/cookieSession.js"></script>
-    <script src="../js/manageUser.js"></script>
-    <script src="../js/login.js"></script>
-    <script src="../js/manageItem.js"></script>
 </head>
 <body>
 <div id="mainContainer">
-
     <header id="header">
         <div id="headerLogin">
             <ul>
@@ -22,133 +22,124 @@
                 <li><a class="login-menu" id ="logoutBtn" onclick="logout()">로그아웃</a></li>
                 <li><a class="login-menu" id ="bagBtn" href="mybag.html">장바구니</a></li>
                 <li><a class="login-menu" id ="profileBtn" href="userProfile.html">내 정보</a></li>
+                <li><a class="login-menu" id="csBtn" href="CScenter.html">고객센터</a></li>
             </ul>
         </div>
-
         <div id="logo">
             <h1><a href="index.html">Sweet Home</a></h1>
         </div>
-
     </header>
 
     <nav id="nav-menu" include-html="./layout/nav_menu.html"></nav>
 
     <section id="contents">
-            <div class="sub_title_area sorting">
-                <div class="sub_title_wrap">
-                    <h3>상의</h3>
-                    <span class="pd_total">총 <em>떙떙</em>개 제품</span>
-                </div>
+        <div class="best_bg">
+            <div class="best_intro">
+                <h2>SweetHome</h2>
+                <h2>BEST PRODUCT</h2>
             </div>
+        </div>
+        <div class="box">
+            <h2>전체상품</h2>
+            <div class="clear"></div>
 
-            <div class="prod_list_wrap">
-                <div class="inner">
-                    <ul class="prod-list item_box">
-                        <li>
-                            <a class="pdtCover" href="#">
-                                <input type="checkbox" name="chooseItem" value="item1">
-                                <div class="pdtThumb">
-                                    <span class="thumb"><img alt="" src="#"/></span>
-                                </div>
-                                <div class="pdtInfo">
-                                    <p class="pdtCat">클렌저/리무버</p>
-                                    <p class="pdtTit">[한정] 마이크로 딥 클렌징 폼 파우치 패키지</p>
-                                    <!-- <p class="pdtTxt">19F/W 남녀공용 리버서블 숏다운</p> -->
-                                    <p class="pdtPrice"><em>248,000</em>원</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-<!--                            detail view-->
-                            <a class="pdtCover" href="#">
-                                <input type="checkbox" name="chooseItem" value="item2">
-                                <div class="pdtThumb">
-                                    <span class="thumb"><img alt="" src="#"/></span>
-                                </div>
-                                <div class="pdtInfo">
-                                    <p class="pdtCat">클렌저/리무버</p>
-                                    <p class="pdtTit">프레쉬 모이스춰 딥 클렌징 오일 200ml</p>
-                                    <!-- <p class="pdtTxt">19F/W 남녀공용 리버서블 숏다운</p> -->
-                                    <p class="pdtPrice"><em>248,000</em>원</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="pdtCover" href="#">
-                                <input type="checkbox" name="chooseItem" value="item3">
-                                <div class="pdtThumb">
-                                    <span class="thumb"><img alt="" src="#"/></span>
-                                </div>
-                                <div class="pdtInfo">
-                                    <p class="pdtCat">클렌저/리무버</p>
-                                    <p class="pdtTit">버블폼 2종</p>
-                                    <!-- <p class="pdtTxt">19F/W 남녀공용 리버서블 숏다운</p> -->
-                                    <p class="pdtPrice"><em>248,000</em>원</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="pdtCover" href="#">
-                                <div class="pdtThumb">
-                                    <span class="thumb"><img alt="" src="#"/></span>
-                                </div>
-                                <div class="pdtInfo">
-                                    <p class="pdtCat">클렌저/리무버</p>
-                                    <p class="pdtTit">세라마이드 아토 6.0 탑투토워시 500ml</p>
-                                    <!-- <p class="pdtTxt">19F/W 남녀공용 리버서블 숏다운</p> -->
-                                    <p class="pdtPrice"><em>248,000</em>원</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="pdtCover" href="#">
-                                <div class="pdtThumb">
-                                    <span class="thumb"><img alt="" src="#"/></span>
-                                </div>
-                                <div class="pdtInfo">
-                                    <p class="pdtCat">클렌저/리무버</p>
-                                    <p class="pdtTit">순행클렌징폼 200ml</p>
-                                    <!-- <p class="pdtTxt">19F/W 남녀공용 리버서블 숏다운</p> -->
-                                    <p class="pdtPrice"><em>248,000</em>원</p>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="pdtCover" href="#">
-                                <div class="pdtThumb">
-                                    <span class="thumb"><img alt="" src="#"/></span>
-                                </div>
-                                <div class="pdtInfo">
-                                    <p class="pdtCat">클렌저/리무버</p>
-                                    <p class="pdtTit">멀티 딥 클린 클렌저 150ml</p>
-                                    <!-- <p class="pdtTxt">19F/W 남녀공용 리버서블 숏다운</p> -->
-                                    <p class="pdtPrice"><em>248,000</em>원</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                    <button type="button" onclick="getChooseItem()">장바구니 담기</button>
-                </div>
-            </div>
+            <ul class="best_items">
+                <li><img src="../css/image/product1_1.jpg" width="270" height="380"></li>
+                <li class="a">에어리 레깅스</li>
+                <li class="b">29,000원</li>
+                <li class="c">리뷰 <span>42</span> 평점 <span>4.1</span></li>
+            </ul>
 
+            <ul class="best_items">
+                <li><img src="../css/image/product1_1.jpg" width="270" height="380"></li>
+                <li class="a">에어리 레깅스</li>
+                <li class="b">29,000원</li>
+                <li class="c">리뷰 <span>42</span> 평점 <span>4.1</span></li>
+            </ul>
 
+            <ul class="best_items">
+                <li><img src="../css/image/product1_1.jpg" width="270" height="380"></li>
+                <li class="a">에어리 레깅스</li>
+                <li class="b">29,000원</li>
+                <li class="c">리뷰 <span>42</span> 평점 <span>4.1</span></li>
+            </ul>
 
+            <ul class="best_items">
+                <li><img src="../css/image/product1_1.jpg" width="270" height="380"></li>
+                <li class="a">에어리 레깅스</li>
+                <li class="b">29,000원</li>
+                <li class="c">리뷰 <span>42</span> 평점 <span>4.1</span></li>
+            </ul>
 
+            <ul class="best_items">
+                <li><img src="../css/image/product1_1.jpg" width="270" height="380"></li>
+                <li class="a">에어리 레깅스</li>
+                <li class="b">29,000원</li>
+                <li class="c">리뷰 <span>42</span> 평점 <span>4.1</span></li>
+            </ul>
+
+            <ul class="best_items">
+                <li><img src="../css/image/product1_1.jpg" width="270" height="380"></li>
+                <li class="a">에어리 레깅스</li>
+                <li class="b">29,000원</li>
+                <li class="c">리뷰 <span>42</span> 평점 <span>4.1</span></li>
+            </ul>
+
+            <ul class="best_items">
+                <li><img src="../css/image/product1_1.jpg" width="270" height="380"></li>
+                <li class="a">에어리 레깅스</li>
+                <li class="b">29,000원</li>
+                <li class="c">리뷰 <span>42</span> 평점 <span>4.1</span></li>
+            </ul>
+
+            <ul class="best_items">
+                <li><img src="../css/image/product1_1.jpg" width="270" height="380"></li>
+                <li class="a">에어리 레깅스</li>
+                <li class="b">29,000원</li>
+                <li class="c">리뷰 <span>42</span> 평점 <span>4.1</span></li>
+            </ul>
+
+            <ul class="best_items">
+                <li><img src="../css/image/product1_1.jpg" width="270" height="380"></li>
+                <li class="a">에어리 레깅스</li>
+                <li class="b">29,000원</li>
+                <li class="c">리뷰 <span>42</span> 평점 <span>4.1</span></li>
+            </ul>
+
+            <ul class="best_items">
+                <li><img src="../css/image/product1_1.jpg" width="270" height="380"></li>
+                <li class="a">에어리 레깅스</li>
+                <li class="b">29,000원</li>
+                <li class="c">리뷰 <span>42</span> 평점 <span>4.1</span></li>
+            </ul>
+
+            <ul class="best_items">
+                <li><img src="../css/image/product1_1.jpg" width="270" height="380"></li>
+                <li class="a">에어리 레깅스</li>
+                <li class="b">29,000원</li>
+                <li class="c">리뷰 <span>42</span> 평점 <span>4.1</span></li>
+            </ul>
+
+            <ul class="best_items">
+                <li><img src="../css/image/product1_1.jpg" width="270" height="380"></li>
+                <li class="a">에어리 레깅스</li>
+                <li class="b">29,000원</li>
+                <li class="c">리뷰 <span>42</span> 평점 <span>4.1</span></li>
+            </ul>
+        </div>
+        
     </section>
 
-    <aside id="rightSideBar" include-html="./layout/rightSideBar.html"></aside>
+    <!-- <aside id="rightSideBar" include-html="./layout/rightSideBar.html"></aside> -->
 
     <footer id="footer" include-html="./layout/footer.html"></footer>
 </div>
-
-
 </body>
+
 <script>
     includeHTML();
     changeLoginBtn();
-    setItemDB();
 </script>
-
-
+<script src="../js/manageItem.js"></script>
 
 </html>
