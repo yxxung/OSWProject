@@ -1,33 +1,64 @@
 /**
  * @author 최제현
  * @date 2021/03/28
- * @type {{items:
- * [{itemName:
- * {image: string,
- * price: string,
- * name: string,
- * category: string}},
- * ]}}
+ * @type
+ *
  *
  * localStorage에 저장될 Item DB
  */
 
+
+
 const itemDB = {
     "items" : [
-        {"item1" :{
+        {"itemNumber" : "0",
             "category" : "top",
             "name" : "아디다스상의",
             "price" : "248,000원",
-                "image" : "src"
+            "image" : "product1_1",
+            "new" : "0"
 
-        }},
-
-        {"item2" : {
+        },
+        {
+            "itemNumber" : "1",
             "category" : "top",
             "name" : "언더아머상의",
             "price" : "180,000원",
-                "image" : "src"
-        }}
+            "image" : "product1_1",
+            "new" : "1"
+        },
+        {
+            "itemNumber" : "2",
+            "category" : "bottom",
+            "name" : "언더아머하의",
+            "price" : "500,000원",
+            "image" : "product1_1",
+            "new" : "1"
+        },
+        {
+            "itemNumber" : "3",
+            "category" : "bottom",
+            "name" : "아디다스하의",
+            "price" : "70,000원",
+            "image" : "product1_1",
+            "new" : "0"
+        },
+        {
+            "itemNumber" : "4",
+            "category" : "training",
+            "name" : "푸쉬업바",
+            "price" : "55,000원",
+            "image" : "product1_1",
+            "new" : "1"
+        },
+        {
+            "itemNumber" : "5",
+            "category" : "training",
+            "name" : "런닝머신",
+            "price" : "1,999,000원",
+            "image" : "product1_1",
+            "new" : "0"
+        }
     ]
 
     /**
@@ -71,7 +102,7 @@ function getChooseItem() {
             //JSON 의 Key 이름을 동적으로 저장합니다.
             let itemJson = {};
             //default 갯수는 1개입니다.
-            itemJson[itemName] = "1" ; //json 의 Key를 변수로 받기위해 프로퍼티 설
+            itemJson["item" + i] = itemName; //json 의 Key를 변수로 받기위해 프로퍼티 설
             choosedItemList.push(itemJson);
         }
     }

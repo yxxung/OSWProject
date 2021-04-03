@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html lang="ko">
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
     <meta name="theme-color" content="#ffffff">
     <title>SweetHome</title>
     <link rel="stylesheet" href="../css/main.css" type="text/css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cf795c31b2.js"
+            crossorigin="anonymous"></script>
     <script src="../js/includeHTML.js"></script>
     <script src="../js/cookieSession.js"></script>
-    <script src="../js/manageItem.js"></script>
+    <script src="../js/render.js"></script>
 </head>
-
 <body>
 <div id="mainContainer">
     <header id="header">
@@ -34,10 +34,23 @@
     <nav id="nav-menu" include-html="./layout/nav_menu.html"></nav>
 
     <section id="contents">
-        <h2>main section</h2>
+        <div class="best_bg">
+            <div class="best_intro">
+                <h2>SweetHome</h2>
+                <h2>NEW PRODUCT</h2>
+            </div>
+        </div>
+        <div id = "divBox" class="box">
+            <h2>전체상품</h2>
+            <div class="clear"></div>
+
+            <button type="button" onclick="getChooseItem()">장바구니 담기</button>
+
+        </div>
+
     </section>
 
-    <aside id="rightSideBar" include-html="./layout/rightSideBar.html"></aside>
+    <!-- <aside id="rightSideBar" include-html="./layout/rightSideBar.html"></aside> -->
 
     <footer id="footer" include-html="./layout/footer.html"></footer>
 </div>
@@ -46,7 +59,8 @@
 <script>
     includeHTML();
     changeLoginBtn();
-    setItemDB();
+    renderNew();
 </script>
+<script src="../js/manageItem.js"></script>
 
 </html>

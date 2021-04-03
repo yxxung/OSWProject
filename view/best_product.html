@@ -11,6 +11,10 @@
             crossorigin="anonymous"></script>
     <script src="../js/includeHTML.js"></script>
     <script src="../js/cookieSession.js"></script>
+
+    <script src="../js/render.js"></script>
+
+
 </head>
 <body>
 <div id="mainContainer">
@@ -39,9 +43,18 @@
                 <h2>BEST PRODUCT</h2>
             </div>
         </div>
+
+        <div id = "divBox" class="box">
+            <h2>전체상품</h2>
+            <div class="clear"></div>
+
+            <button type="button" onclick="getChooseItem()">장바구니 담기</button>
+
+
         <div class="box">
             <h2>전체상품</h2>
             <div class="clear"></div>
+
         </div>
 
     </section>
@@ -54,6 +67,10 @@
 <script>
     includeHTML();
     changeLoginBtn();
+
+    renderNew();
+
+
 </script>
 <script src="../js/manageItem.js"></script>
 
