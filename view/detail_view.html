@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#ffffff">
+    <title>SweetHome</title>
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <script src="https://kit.fontawesome.com/cf795c31b2.js"
+            crossorigin="anonymous"></script>
+    <script src="../js/includeHTML.js"></script>
+    <script src="../js/cookieSession.js"></script>
+</head>
+
+<body id="mainContainer">
+    <header id="header">
+        <div id="headerLogin">
+            <ul>
+                <li><a class="login-menu" id ="registerBtn" href="register.html">회원가입</a></li>
+                <li><a class="login-menu" id ="loginBtn" href="login.html">로그인</a></li>
+                <li><a class="login-menu" id ="logoutBtn" onclick="logout()">로그아웃</a></li>
+                <li><a class="login-menu" id ="bagBtn" href="mybag.html">장바구니</a></li>
+                <li><a class="login-menu" id ="profileBtn" href="userProfile.html">내 정보</a></li>
+                <li><a class="login-menu" id="csBtn" href="CScenter.html">고객센터</a></li>
+            </ul>
+        </div>
+        <div id="logo">
+            <h1><a href="index.html">Sweet Home</a></h1>
+        </div>
+    </header>
+
+    <nav id="nav-menu" include-html="./layout/nav_menu.html"></nav>
+
+    <section id="contents">
+        <!-- sectionWrap 시작 -->
+        <div id="sectionWrap">
+            <!-- product section 시작 -->
+            <section id="product" class="clearfix">
+                <div class="product_img">
+                    <img src="../css/image/product1_1.jpg" width="500" height="750" alt="레깅스 상품 이미지">
+                </div>
+                <div class="product_tit">
+                    <h3>에어리 레깅스</h3>
+                    <p>가볍고 탄탄한 sweethome의 신작입니다.</p>
+                </div>
+                <div class="product_info">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th>판매가</th>
+                            <td>20,000원</td>
+                        </tr>
+                        <tr>
+                            <th>배송</th>
+                            <td>택배(주문 시 결제)</td>
+                        </tr>
+                        <tr>
+                            <th>상품정보</th>
+                            <td>상세페이지 참조</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="product_value">
+                    <div class="number">
+                        <a href="#" class="minus"><i class="xi-minus-circle xi-2x"></i></a>
+                        <input type="number" min="1" value="1">
+                        <a href="#" class="plus"><i class="xi-plus-circle xi-2x"></i></a>
+                    </div>
+                    <p>총 상품금액 <span>20,000</span>원</p>
+                </div>
+
+                <div class="product_link">
+                    <a href="#"><i class="xi-cart-o xi-x"></i> 장바구니</a>
+                    <a href="#"><i class="xi-credit-card xi-x"></i> 구매하기</a>
+                </div>
+
+            </section>
+            <!-- product section 끝 -->
+
+            <!-- 상세이미지 -->
+            <div class="tap_product">
+                <img src="../css/image/product1_1.jpg" width="670" height="980" alt="제품 상세 설명 이미지">
+                <img src="../css/image/product1_2.jpg" width="670" height="980" alt="제품 상세 설명 이미지">
+                <img src="../css/image/product1_3.jpg" width="670" height="980" alt="제품 상세 설명 이미지">
+            </div>
+
+        </div>
+        <!-- sectionWrap 끝 -->
+
+            <footer id="footer" include-html="./layout/footer.html">
+
+            </footer>
+
+    </section>
+</body>
+
+<script>
+    includeHTML();
+    changeLoginBtn();
+</script>
+<script src="../js/manageItem.js"></script>
+
+</html>
