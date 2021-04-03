@@ -88,6 +88,7 @@ function getChooseItem() {
     const currentUser = getCookie("currentUser").toString();
     const storageName = currentUser + "userItemList" ;
     let choosedItemList = new Array();
+    let resultList = new Set();
 
 
     if(currentUser == null){
@@ -97,27 +98,59 @@ function getChooseItem() {
 
     try {
         let currentStorage = JSON.parse(localStorage.getItem(storageName));
-        for(let i =0; i < currentStorage.items[i].length; i++){
+        for(let i =0; i < currentStorage.items.length; i++){
             choosedItemList.push(currentStorage.items[i])
         }
 
+        for(let i =0; i<chooseItemLength; i++){
+            if(chooseItem[i].checked == true){
+                let itemName = document.getElementsByName("chooseItem")[i].value;
+                //JSON 의 Key 이름을 동적으로 저장합니다.
+                let itemJson = {};
+                //default 갯수는 1개입니다.
+                itemJson["item" + i] = itemName; //json 의 Key를 변수로 받기위해 프로퍼티 설
+                choosedItemList.push(itemJson);
+            }
+
+        }
+
+        let uniqueJson = choosedItemList.filter((thing, index) => {
+            const _thing = JSON.stringify(thing);
+            return index === choosedItemList.findIndex(obj => {
+                return JSON.stringify(obj) === _thing;
+            });
+        });
+        localStorage.setItem(storageName, JSON.stringify({items : uniqueJson}));
+
     }catch (e) {
         localStorage.setItem(storageName, null);
-    }
-    for(let i =0; i<chooseItemLength; i++){
-        if(chooseItem[i].checked == true){
-            let itemName = document.getElementsByName("chooseItem")[i].value;
-            //JSON 의 Key 이름을 동적으로 저장합니다.
-            let itemJson = {};
-            //default 갯수는 1개입니다.
-            itemJson["item" + i] = itemName; //json 의 Key를 변수로 받기위해 프로퍼티 설
-            choosedItemList.push(itemJson);
+
+        for(let i =0; i<chooseItemLength; i++){
+            if(chooseItem[i].checked == true){
+                let itemName = document.getElementsByName("chooseItem")[i].value;
+                //JSON 의 Key 이름을 동적으로 저장합니다.
+                let itemJson = {};
+                //default 갯수는 1개입니다.
+                itemJson["item" + i] = itemName; //json 의 Key를 변수로 받기위해 프로퍼티 설
+                choosedItemList.push(itemJson);
+
+            }
         }
+        let uniqueJson = choosedItemList.filter((thing, index) => {
+            const _thing = JSON.stringify(thing);
+            return index === choosedItemList.findIndex(obj => {
+                return JSON.stringify(obj) === _thing;
+            });
+        });
+        localStorage.setItem(storageName, JSON.stringify({items : uniqueJson}));
     }
 
+
     //localStorage에 고른 상품들을 저장합니다.
-    localStorage.setItem(storageName, JSON.stringify({items : choosedItemList}));
+
 
     alert('장바구니에 담겼습니다.');
 
 }
+
+
