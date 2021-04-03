@@ -11,6 +11,7 @@
             crossorigin="anonymous"></script>
     <script src="../js/includeHTML.js"></script>
     <script src="../js/cookieSession.js"></script>
+    <script src="../js/render.js"></script>
 </head>
 <body>
 <div id="mainContainer">
@@ -43,12 +44,18 @@
             <h2>전체상품</h2>
             <div class="clear"></div>
 
-            <ul class="best_items">
-                <li><img src="../css/image/product1_1.jpg" width="270" height="380"></li>
-                <li class="a">에어리 레깅스</li>
-                <li class="b">29,000원</li>
-                <li class="c">리뷰 <span>42</span> 평점 <span>4.1</span></li>
-            </ul>
+<!--            <ul class="best_items">-->
+
+<!--                <input type="checkbox" name="chooseItem" value="0">-->
+<!--                <li><img src="../css/image/product1_1.jpg" width="270" height="380"></li>-->
+<!--                <li class="a">에어리 레깅스</li>-->
+<!--                <li class="b">29,000원</li>-->
+<!--                <li class="c">리뷰 <span>42</span> 평점 <span>4.1</span></li>-->
+<!--            </ul>-->
+
+
+
+            <button type="button" onclick="getChooseItem()">장바구니 담기</button>
 
         </div>
 
@@ -63,6 +70,7 @@
 <script>
     includeHTML();
     changeLoginBtn();
+    renderProduct();
 </script>
 <script src="../js/manageItem.js"></script>
 

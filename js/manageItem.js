@@ -14,20 +14,20 @@
 
 const itemDB = {
     "items" : [
-        {"itemNo" : "0",
+        {"itemNumber" : "0",
             "category" : "top",
             "name" : "아디다스상의",
             "price" : "248,000원",
-                "image" : "src"
+                "image" : "product1_1"
 
         },
 
         {
-            "itemNo" : "1",
+            "itemNumber" : "1",
             "category" : "top",
             "name" : "언더아머상의",
             "price" : "180,000원",
-                "image" : "src"
+                "image" : "product1_1"
         }
     ]
 
