@@ -4,18 +4,13 @@ function renderProduct() {
     const userKey = getCookie("currentUser");
     const userItemList = JSON.parse(localStorage.getItem(userKey+"userItemList"));
     const localItemDB = JSON.parse(localStorage.getItem("DB"));
-    const userProfile = localStorage.getItem(userKey);
-    let contents = document.getElementById("contents");
-    // html render object
-
-
 
     if(userItemList !== null){
 
 
         for(let i = 0; i<localItemDB.DB.items.length; i++){
 
-
+            // 렌더링 할 html 오브젝트  생성
             let divBox = document.getElementById("divBox");
             let itemUl = document.createElement("ul");
             let itemInput = document.createElement("input");
@@ -25,8 +20,6 @@ function renderProduct() {
             let itemLiB = document.createElement("li");
             let itemLiC = document.createElement("li");
             let thisItem = localItemDB.DB.items[i];
-
-
 
 
             itemInput.setAttribute("type", "checkbox");
