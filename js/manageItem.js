@@ -95,7 +95,15 @@ function getChooseItem() {
         window.location.href = "manageUser.html";
     }
 
+    try {
+        let currentStorage = JSON.parse(localStorage.getItem(storageName));
+        for(let i =0; i < currentStorage.items[i].length; i++){
+            choosedItemList.push(currentStorage.items[i])
+        }
 
+    }catch (e) {
+        localStorage.setItem(storageName, null);
+    }
     for(let i =0; i<chooseItemLength; i++){
         if(chooseItem[i].checked == true){
             let itemName = document.getElementsByName("chooseItem")[i].value;
